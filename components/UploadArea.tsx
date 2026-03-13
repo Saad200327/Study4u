@@ -43,12 +43,13 @@ export default function UploadArea({ onUpload, uploading }: Props) {
       >
         <div className="text-4xl mb-3">📂</div>
         <p className="text-apple-dark font-semibold text-lg">Drop your files here or click to upload</p>
-        <p className="text-apple-gray text-sm mt-1">Supports PDF, PNG, JPG, TXT, MD — up to 20 MB each</p>
+        <p className="text-apple-gray text-sm mt-1">Supports PDF, TXT, MD — up to 20 MB each</p>
+        <p className="text-apple-gray text-xs mt-1 opacity-70">Note: Image files (PNG/JPG) are not supported — convert to PDF or TXT first</p>
         <input
           ref={inputRef}
           type="file"
           multiple
-          accept=".pdf,.png,.jpg,.jpeg,.txt,.md"
+          accept=".pdf,.txt,.md"
           className="hidden"
           onChange={handleChange}
         />
